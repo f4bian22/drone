@@ -10,17 +10,17 @@ Read documentation for further explanation on added code. Code not found in base
 Code is created and used by u/f4bian22 & u/?
 
 
-#import socket
-#import time
-#import threading
+	import socket
+	import time
+	import threading
 
-#adres van tello - altijd hetzelfde
-#tello = ('192.168.10.1', 8889)
+	#adres van tello - altijd hetzelfde
+	tello = ('192.168.10.1', 8889)
 
-#adres van locale pc - altijd hetzelfde
-#local = ('0.0.0.0',9010)
+	#adres van locale pc - altijd hetzelfde
+	local = ('0.0.0.0',9010)
 
-#def init_drone():
+	def init_drone():
  
     # create upd client on PC
     try:
@@ -29,7 +29,7 @@ Code is created and used by u/f4bian22 & u/?
         print(err)
         exit()
         
-   #kopppelen
+    #kopppelen
     s.bind(local)
    
     try:
@@ -48,7 +48,7 @@ Code is created and used by u/f4bian22 & u/?
 
 
  
-#def info(s):
+	def info(s):
 
     print('-----------Informaiton------------')
     
@@ -58,15 +58,15 @@ Code is created and used by u/f4bian22 & u/?
     print('Battery: ',  response.decode(encoding='utf-8'))
    
  
-#def takeoff(s):
+	def takeoff(s):
     s.sendto('takeoff'.encode(), tello)
     time.sleep(10)
  
-#def land(s):
+	def land(s):
     s.sendto('land'.encode(), tello)
     time.sleep(5)
  
-#def main():
+	def main():
     s = init_drone()
 
     takeoff(s)
@@ -75,5 +75,5 @@ Code is created and used by u/f4bian22 & u/?
 
 
  
-#if __name__ == '__main__':
+	if __name__ == '__main__':
     main()
