@@ -91,6 +91,10 @@ def turnccw(s):
     s.sendto('ccw'.encode(), tello)
     time.sleep(4)
  
+ def input(s):
+    I1 = input()
+    s.sendto('I1
+ 
 def main():
     s = init_drone()
 
