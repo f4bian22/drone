@@ -54,6 +54,42 @@ def takeoff(s):
 def land(s):
     s.sendto('land'.encode(), tello)
     time.sleep(5)
+    
+def up(s):
+    s.sendto('up'.encode(), tello)
+    time.sleep(5)
+
+def down(s):
+    s.sendto('down'.encode(), tello)
+    time.sleep(5)
+    
+def left(s):
+    s.sendto('left'.encode(), tello)
+    time.sleep(2)
+    
+def right(s):
+    s.sendto('right'.encode(), tello)
+    time.sleep(2)
+    
+def flip(s):
+    s.sendto('flip'.encode(), tello)
+    time.sleep(5)
+    
+def forward(s):
+    s.sendto('forward'.encode(), tello)
+    time.sleep(2)
+    
+def back(s):
+    s.sendto('back'.encode(), tello)
+    time.sleep(2)
+    
+def turncw(s):
+    s.sendto('cw'.encode(), tello)
+    time.sleep(4)
+    
+def turnccw(s):
+    s.sendto('ccw'.encode(), tello)
+    time.sleep(4)
  
 def main():
     s = init_drone()
@@ -61,8 +97,6 @@ def main():
     takeoff(s)
     info(s)
     land(s)
-
-
  
 if __name__ == '__main__':
     main()
