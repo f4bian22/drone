@@ -128,10 +128,23 @@ def invoer(s):
         if I1 == "stop" :
             stop = True
 
-        s.sendto(I1.encode(), tello)
+        s.sendto(str(I1).encode(), tello)
         time.sleep(2)
     
-    
+  def freemove(s):
+    cmd = input()
+    if cmd == "w":
+        vooruit(s)
+    if cmd == "s":
+        achteruit(s)
+    if cmd == "a":
+        links(s)
+    if cmd == "d":
+        rechts(s)
+    if cmd == "e":
+        s.sendto('cw 45'.encode, tello)
+    if cmd == "q":
+        s.sendto('ccw 45'.encode, tello)  
 
 
 
