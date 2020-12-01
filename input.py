@@ -1,7 +1,7 @@
 import socket
 import time
 import threading
-
+from pynput import keyboard
 
 
 #adres van tello - altijd hetzelfde
@@ -131,20 +131,19 @@ def invoer(s):
         s.sendto(str(I1).encode(), tello)
         time.sleep(2)
     
-  def freemove(s):
-    cmd = input()
-    if cmd == "w":
-        vooruit(s)
-    if cmd == "s":
-        achteruit(s)
-    if cmd == "a":
-        links(s)
-    if cmd == "d":
-        rechts(s)
-    if cmd == "e":
-        s.sendto('cw 45'.encode, tello)
-    if cmd == "q":
-        s.sendto('ccw 45'.encode, tello)  
+def on_press(a):
+    release = False
+    def on_release(a):
+        release = True
+    x = 1
+    while release == False:
+        x += 1
+        s.sendto('left x'.encode, tello)
+        time.sleep(2)
+    
+def freemove(s):
+    on_press(a)
+
 
 
 
