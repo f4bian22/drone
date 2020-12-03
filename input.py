@@ -296,6 +296,36 @@ def on_press(a):
         x += 1
         s.sendto('left x'.encode, tello)
         time.sleep(2)
+       
+def on_press(w):
+    release = False
+    def on_release(w):
+        release = True
+    x = 1
+    while release == False:
+        x += 1
+        s.sendto('up x'.encode, tello)
+        time.sleep(2)
+
+def on_press(s):
+    release = False
+    def on_release(s):
+        release = True
+    x = 1
+    while release == False:
+        x += 1
+        s.sendto('down x'.encode, tello)
+        time.sleep(2)
+
+def on_press(d):
+    release = False
+    def on_release(d):
+        release = True
+    x = 1
+    while release == False:
+        x += 1
+        s.sendto('right x'.encode, tello)
+        time.sleep(2)
     
 def freemove(s):
     on_press(a)
