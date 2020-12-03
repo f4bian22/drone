@@ -303,7 +303,6 @@ def freemove(s):
 
 
 
-#LichaamTest
  
 def main():
     s = init_drone()
