@@ -279,7 +279,7 @@ def land(s):
 def invoer(s):
     stop = False
     print('send in your command in apostrophes')
-    while stop = False
+    while stop == False:
         I1 = input()
         if I1 == "stop" :
             stop = True
