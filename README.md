@@ -7,7 +7,7 @@ python 3.8 32-bit
 base code below anything else is added.
 Read documentation for further explanation on added code. Code not found in base nor documentation added in extdoc.txt
 
-Code is created and used by u/f4bian22 & u/?
+Code is created and used by u/f4bian22 & u/JarnoMulder
 
 
 	import socket
